@@ -17,9 +17,6 @@ public class Main {
 		 Ville uneVille = null;
 		int choix;
 		
-		/**
-		 * 
-		 */
 		do {
 			System.out.println("\n[--Ma carte--]\n");
 	        System.out.println("1 - Ajouter un pays");
