@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class Main {
 	
 	private static Scanner clavier;
-	static Continent unContinent = new Continent("Amérique du nord");
+	
 	public static void main(String[] args) {
 		
 		clavier = new Scanner(System.in);
 		
-		 
+		Continent unContinent = new Continent("Amérique du nord");
 		 Pays unPays = null;
 		 Ville uneVille = null;
 		int choix;
@@ -31,7 +31,7 @@ public class Main {
 				ajoutPays(unContinent, unPays);
 				break;
 			case 2:
-				ajoutVille();
+				ajoutVille(unContinent);
 				break;
 			case 3:
 				affichageContinent(unContinent);
@@ -61,7 +61,7 @@ public class Main {
 		Capitale uneCapitale = new Capitale (capitaleCapitale, nbHabitantCapitale, superficieCapitale);
 		unContinent.ajouterPays(desPays = new Pays(paysPays, languePays, monnaiePays, uneCapitale));
 	}
-	public static void ajoutVille() {
+	public static void ajoutVille(Continent unContinent) {
 		System.out.println("Ajout de cette ville dans quel pays ? : ");
 		String nomPays = clavier.nextLine();
 		int i = unContinent.rechercherPays(nomPays);
